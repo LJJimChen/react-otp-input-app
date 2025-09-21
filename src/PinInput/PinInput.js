@@ -23,7 +23,7 @@ import styles from '../PinInput/PinInput.module.css';
  * @param {OTPInputProps} param0
  * @returns {JSX.Element}
  */
-function PinCodeInput({
+function PinInputControl({
   className,
   containerClassName,
   onChange,
@@ -153,7 +153,7 @@ function PinCodeInput({
  * @param {SlotProps} param0
  * @returns {JSX.Element}
  */
-function Slot({
+function PinSlotControl({
   char,
   placeholderChar,
   isActive,
@@ -186,8 +186,8 @@ function debounce(fn, delay) {
   };
 }
 
-const PinSlot = memo(Slot);
-const PinInput = memo(PinCodeInput);
+const PinSlot = memo(PinSlotControl);
+const PinInput = memo(PinInputControl);
 export {
   PinInput,
   PinSlot,
